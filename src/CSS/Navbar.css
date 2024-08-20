@@ -7,9 +7,13 @@
   z-index: 1000;
   display: flex;
   justify-content: flex-end; /* 오른쪽 정렬 */
+
 }
 
 .navbar ul {
+
+
+  
   list-style: none;
   display: flex;
   margin: 0;
@@ -26,9 +30,16 @@
 }
 
 .navbar ul li img {
-  width: 50px; /* 고정 크기 */
-  height: 50px; /* 고정 크기 */
+  width: 30px; /* 고정 크기 */
+  height: 30px; /* 고정 크기 */
 }
+
+.navbar ul li img:hover {
+  width: 30px; /* 고정 크기 */
+  height: 30px; /* 고정 크기 */
+  color: rgb(63, 63, 63);
+}
+
 
 .navbar ul li a:hover img {
   filter: brightness(0.8); /* 호버 시 이미지 밝기 조정 */

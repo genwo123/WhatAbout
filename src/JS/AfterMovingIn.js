@@ -8,7 +8,7 @@ class AfterMovingIn extends Component {
   render() {
     return (
       <div>
-        <h1>입주 후 확인 사항</h1>
+        
         <div className="after-moving-container"> {/* 클래스 추가 */}
           <AfterForm1 />
           <AfterForm2 />

@@ -6,57 +6,64 @@ function AfterFormDetail3() {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
   const navigate = useNavigate();
 
   return (
     <div className="form-detail-container">
-      <button className="back-button" onClick={() => navigate('/after-moving-in')}>
-        되돌리기
-      </button>
 
-      <h2>계약전 체크리스트</h2>
+      <h2>입주 후 체크리스트</h2>
 
       <div className={`checklist-item ${isOpen1 ? 'open' : ''}`}>
         <h3 onClick={() => setIsOpen1(!isOpen1)} className="checklist-title">
-          <input type="checkbox" /> 등록된 정식 공인중개사가 맞는지 확인 {isOpen1 ? '▲' : '▼'}
+          <input type="checkbox" /> 확정 일자 받기 전, 등기부등본 확인 {isOpen1 ? '▲' : '▼'}
         </h3>
         {isOpen1 && (
           <ul>
-            <li>국가공간정보포털에서 공인중개사무소 찾기로 확인하세요</li>
-            <li>임대차 계약서에는 사전 계약된 내용이 반영되어야 합니다</li>
+            <li>등기부등본 확인 후 문제 없을 경우, 잔금을 입금해요.</li>
+            <li>만약 부동산에 새로운 권리관계 변동이 생겼다면, 
+              임차인은 잔금을 지급하지 않고 계약을 재검토하거나, 계약을 철회하는 등의 조치를 취할 수 있기 때문이에요. 잔금을 지급한 후에는 임차인이 권리를 주장하기 어려운 경우가 많기 때문에, 변동 사항이 없는지 확인하는 것이 매우 중요해요. </li>
           </ul>
         )}
       </div>
 
       <div className={`checklist-item ${isOpen2 ? 'open' : ''}`}>
         <h3 onClick={() => setIsOpen2(!isOpen2)} className="checklist-title">
-          <input type="checkbox" /> 등록된 정식 공인중개사가 맞는지 확인 {isOpen2 ? '▲' : '▼'}
+          <input type="checkbox" />KB국민은행, 하나은행, 케이뱅크 앱에서 등기부등본 변동 알림 신청
         </h3>
-        {isOpen2 && (
+        
+      </div>
+
+
+      <div className={`checklist-item ${isOpen3 ? 'open' : ''}`}>
+        <h3 onClick={() => setIsOpen3(!isOpen3)} className="checklist-title">
+          <input type="checkbox" />이사 후 최대한 빨리 전입신고를 하고, 확정일자 받기{isOpen2 ? '▲' : '▼'}
+        </h3>
+        {isOpen3 && (
           <ul>
-            <li>확인되지 않은 중개인을 통해 거래 시 법적 보호를 받을 수 없습니다</li>
-            <li>공인중개사 자격증을 확인하고, 공인된 사무소에서 계약하세요</li>
+            <li>이사 당일 정부24 사이트 또는 주민센터에서 확정일자 및 전입신고를 진행해야 보증금을 보호받을 수 있어요. </li>
+            <li>임대차 신고는 부동산거래관리시스템 사이트 또는 주민센터에서 계약 체결 후 30일 이내에 신고해야 해요. (임대차 신고 시에는 확정일자가 자동으로 부여됩니다)</li>
           </ul>
         )}
       </div>
 
-      <div className={`checklist-item ${isOpen3 ? 'open' : ''}`}>
-        <h3 onClick={() => setIsOpen3(!isOpen3)} className="checklist-title">
-          <input type="checkbox" /> 등록된 정식 공인중개사가 맞는지 확인 {isOpen3 ? '▲' : '▼'}
+      <div className={`checklist-item ${isOpen4 ? 'open' : ''}`}>
+        <h3 onClick={() => setIsOpen4(!isOpen4)} className="checklist-title">
+          <input type="checkbox" />보증금 반환보증 보험 가입{isOpen2 ? '▲' : '▼'}
         </h3>
-        {isOpen3 && (
+        {isOpen4 && (
           <ul>
-            <li>임대 물건의 상태를 확인하고, 사진을 첨부해 증거로 남기세요</li>
-            <li>서류상에 모든 조건이 명확히 기재되어 있는지 확인하세요</li>
-          </ul>
+            <li>주택도시보증공사(HUG), 서울보증보험(SGI), 주택금융공사(HF) 등에서 보증금을 보증 보험에 가입하면 사고 발생 시에 보증금을 보호받을 수 있어요.</li>
+            </ul>
         )}
       </div>
+
       
       <div className="button-container">
         <button className="return-button" onClick={() => navigate(-1)}>
           이전
         </button>
-        <button className="submit-button">
+        <button className="submit-button" onClick={() => navigate('/')}>
           확인
         </button>
       </div>
