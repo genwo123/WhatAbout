@@ -12,16 +12,3 @@
   background-color: #f1f1f1;
 }
 
-.global-button {
-  padding: 10px 20px;
-  background-color: #663399;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.global-button:hover {
-  background-color: #542d80;
-}

@@ -1,0 +1,35 @@
+.navbar {
+  background-color: #e74c3c; /* 레드 색상 */
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li img {
+  width: 50px; /* 고정 크기 */
+  height: 50px; /* 고정 크기 */
+}
+
+.navbar ul li a:hover img {
+  filter: brightness(0.8); /* 호버 시 이미지 밝기 조정 */
+}

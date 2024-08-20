@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../CSS/ContractForm.css';
 
 function ContractForm() {
+  const navigate = useNavigate();
+
+  const handleNextPage = () => {
+    navigate('/choice');
+  };
+
   return (
     <div className="contract-container">
       <header className="contract-header">
@@ -44,6 +51,8 @@ function ContractForm() {
           <p>Date ____________________</p>
         </div>
       </div>
+
+      <button className="next-button" onClick={handleNextPage}>Next Page</button>
     </div>
   );
 }
