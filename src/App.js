@@ -17,14 +17,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/after-moving-in" element={<AfterMovingIn />} />
-          <Route path="/before-moving-in" element={<BeforMovingIn />} />
+          <Route path="/befor-moving-in" element={<BeforMovingIn />} />
           <Route path="/after-form-1-detail" element={<AfterFormDetail1 />} />
           <Route path="/after-form-2-detail" element={<AfterFormDetail2 />} />
           <Route path="/after-form-3-detail" element={<AfterFormDetail3 />} />
+          <Route path="/befor-form-1-detail" element={<AfterFormDetail1 />} />
+          <Route path="/befor-form-2-detail" element={<AfterFormDetail2 />} />
+          <Route path="/befor-form-3-detail" element={<AfterFormDetail3 />} />
         </Routes>
       </div>
     </Router>
   );
 }
+
 
 export default App;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../CSS/AfterFormDetail.css';
+import '../../CSS/BeforFormDetail.css';
 
-function AfterFormDetail2() {
+function BeforFormDetail3() {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
@@ -10,7 +10,7 @@ function AfterFormDetail2() {
 
   return (
     <div className="form-detail-container">
-      <button className="back-button" onClick={() => navigate('/after-moving-in')}>
+      <button className="back-button" onClick={() => navigate('/befor-moving-in')}>
         되돌리기
       </button>
 
@@ -60,8 +60,9 @@ function AfterFormDetail2() {
           확인
         </button>
       </div>
+
     </div>
   );
 }
 
-export default AfterFormDetail2;
+export default BeforFormDetail3;

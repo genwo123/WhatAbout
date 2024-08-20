@@ -52,12 +52,15 @@ function AfterFormDetail1() {
         )}
       </div>
       
-      <button className="return-button" onClick={() => navigate(-1)}>
-        이전
-      </button>
-      <button className="submit-button">
-        확인
-      </button>
+      <div className="button-container">
+        <button className="return-button" onClick={() => navigate(-1)}>
+          이전
+        </button>
+        <button className="submit-button">
+          확인
+        </button>
+      </div>
+
     </div>
   );
 }

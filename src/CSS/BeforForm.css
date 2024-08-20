@@ -1,0 +1,40 @@
+.befor-moving-container {
+  display: flex;
+  flex-wrap: wrap;  /* 박스들이 넘치면 다음 줄로 넘어가도록 설정 */
+  justify-content: space-between;  /* 박스 사이의 간격을 균등하게 분배 */
+  padding: 20px;
+  height: 600px;
+  gap: 20px;  /* 박스 간격 추가 */
+}
+
+.befor-form-box {
+  position: relative;  /* 부모 요소를 기준으로 자식 요소 위치 설정 */
+  flex: 1 1 calc(33% - 20px); /* 각 박스가 화면의 1/3을 차지하도록 설정하고 간격 추가 */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 250px;  /* 최소 너비 설정 */
+}
+
+.befor-form-box h3 {
+  margin-top: 0;
+}
+
+.befor-form-box button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #e74c3c;  /* 네비게이션 바 색상과 동일한 빨간색 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.befor-form-box button:hover {
+  background-color: #c0392b;  /* 클릭 시 색상 변경 */
+}
