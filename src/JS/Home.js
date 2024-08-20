@@ -6,7 +6,7 @@ function Home() {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate('/after-moving-in'); 
+    navigate('/befor-moving-in'); 
   };
 
   return (

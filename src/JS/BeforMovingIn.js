@@ -1,27 +1,29 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../CSS/Home.css';
+import React, { Component } from 'react';
+import BeforForm1 from './BeforMoving/BeforForm1';
+import BeforForm2 from './BeforMoving/BeforForm2';
+import BeforForm3 from './BeforMoving/BeforForm3';
 
-function Home() {
-  const navigate = useNavigate();
+class BeforMovingIn extends Component {
+  render() {
+    const containerStyle = {
+      display: 'flex',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
+      gap: '20px',
+      padding: '20px',
+    };
 
-  const handleNavigate = () => {
-    navigate('/before-moving-in'); // "/before-moving-in" 경로로 이동
-  };
-
-  return (
-    <div className="home-container">
-      <div className="main-content">
-        <h2>안전한 집을 위한 당신만의 안내원</h2>
-        <h1>뭐 어때</h1>
-        <button className="cta-button" onClick={handleNavigate}>확인하기</button>
+    return (
+      <div>
+        <h1>입주 후 확인 사항</h1>
+        <div style={containerStyle}>
+          <BeforForm1 />
+          <BeforForm2 />
+          <BeforForm3 />
+        </div>
       </div>
-      <div className="bottom-content">
-        <div className="left-text">사진 촬영으로 빠르게 확인하는 계약서 위험여부</div>
-        <div className="right-text">입주 전부터 안전하게 따라오세요</div>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
-export default Home;
+export default BeforMovingIn;
