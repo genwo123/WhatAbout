@@ -11,6 +11,7 @@ import BeforFormDetail1 from './JS/BeforMoving/BeforFormDetail1';
 import BeforFormDetail2 from './JS/BeforMoving/BeforFormDetail2';
 import BeforFormDetail3 from './JS/BeforMoving/BeforFormDetail3';
 import Upload from './JS/Upload';
+import Result from './JS/Result';
 
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/befor-form-2-detail" element={<BeforFormDetail2 />} />
           <Route path="/befor-form-3-detail" element={<BeforFormDetail3 />} />
           <Route path="/upload" element={<Upload />} /> {/* 경로 추가 */}
+          <Route path="/Result" element={<Result />} /> {/* 경로 추가 */}
         </Routes>
       </div>
     </Router>

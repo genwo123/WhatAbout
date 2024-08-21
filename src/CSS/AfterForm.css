@@ -24,7 +24,7 @@
 
 .after-form-box button {
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -38,3 +38,19 @@
 .after-form-box button:hover {
   background-color: #c0392b;  /* 클릭 시 색상 변경 */
 }
+
+.highlight-title {
+  font-family: 'Ownglyph_UNZ-Rg';
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  color: #2A5298; /* 네비게이션 바와 잘 어울리는 색상 */
+  margin-top: 50px; /* 네비게이션 바와의 간격 */
+  margin-bottom: 0px; /* 아래 컨텐츠와의 간격 */
+}
+
+.sub {
+  text-align: center;
+  color: rgb(62, 62, 62);
+}
+

@@ -1,16 +1,37 @@
+
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './../../CSS/App.css';
+import find from "./../../img/find.png"
 
-function BeforForm1() {
+const BeforForm1 = () => {
   const navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate('/entry-before-detail');
+  };
+
   return (
-    <div className="befor-form-box">
-      <h3>첫 번째 박스</h3>
-      <p>이곳에 첫 번째 박스의 내용을 추가하세요.</p>
-      <button onClick={() => navigate('/befor-form-1-detail')}>상세보기</button>
+    <div className="contract-step">
+       <p className ="tit">1) 계약 전</p>
+      <div className="icon-container">
+        <img src={find} alt="Magnifier" className="icon" />
+      </div>
+      <ul>
+        <li>
+          <span aria-label="check">✅</span>중개인 확인
+        </li>
+        <li>
+          <span aria-label="check">✅</span>매물 확인
+        </li>
+        <li>
+          <span aria-label="check">✅</span>임대인 확인
+        </li>
+      </ul>
+      <button className="detail-button" onClick={() => navigate('/befor-form-1-detail')}>상세보기</button>
     </div>
   );
-}
+};
 
 export default BeforForm1;

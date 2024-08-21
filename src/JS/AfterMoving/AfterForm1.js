@@ -1,16 +1,30 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './../../CSS/App.css';
+import find from "./../../img/find.png"
 
-function AfterForm1() {
+const AfterForm1 = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="after-form-box">
-      <h3>첫 번째 박스</h3>
-      <p>이곳에 첫 번째 박스의 내용을 추가하세요.</p>
-      <button onClick={() => navigate('/after-form-1-detail')}>상세보기</button>
+    <div className="contract-step">
+      <p className="tit">4) 입주 전</p>
+      <div className="icon-container">
+        <img src={find} alt="Truck" className="icon" />
+      </div>
+      <ul>
+        <li>
+          <span role="img" aria-label="check">✅</span> 신청사항 확인
+        </li>
+        <li>
+          <span role="img" aria-label="check">✅</span> 연락사항 확인
+        </li>
+        </ul>
+      <button className="detail-button" onClick={() => navigate('/after-form-1-detail')}>
+        상세보기
+      </button>
     </div>
   );
-}
+};
 
-export default AfterForm1;
+export default  AfterForm1;

@@ -63,7 +63,7 @@ function AfterFormDetail3() {
         <button className="return-button" onClick={() => navigate(-1)}>
           이전
         </button>
-        <button className="submit-button" onClick={() => navigate('/')}>
+        <button className="submit-button" onClick={() => navigate('/after-form-1-detail')}>
           확인
         </button>
       </div>

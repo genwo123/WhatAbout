@@ -12,8 +12,6 @@ function BeforFormDetail1() {
 
   return (
     <div className="form-detail-container">
-
-
       <h2>계약전 체크리스트</h2>
 
       <div className={`checklist-item ${isOpen1 ? 'open' : ''}`}>
@@ -22,7 +20,7 @@ function BeforFormDetail1() {
         </h3>
         {isOpen1 && (
           <ul>
-            <li>국가공간정보포털에서 공인중개사무소 찾기로 확인하세요</li>
+            <li><a href = "https://www.ngii.go.kr/kor/content.do?sq=237">국가공간정보포털</a>에서 공인중개사무소 찾기로 확인하세요</li>
             <li>임대차 계약서에는 사전 계약된 내용이 반영되어야 합니다</li>
             <li>내게 집을 보여준 중개소와, 계약서에 서명하는 중개소가 서로 다르면 불법이에요</li>
           </ul>
@@ -59,7 +57,7 @@ function BeforFormDetail1() {
         </h3>
         {isOpen4 && (
           <ul>
-            <li>대법원 인터넷 등기소 사이트에서 등기부등본 발급할 수 있어요</li>
+            <li><a href = "http://www.iros.go.kr/PMainJ.jsp">대법원 인터넷 등기소 사이트</a>에서 등기부등본 발급할 수 있어요</li>
             <li>월세 계약서에 기재된 임대인의 정보와 등기사항 전부 증명서 내 갑구의 소유주의 정보가 일치하는지 확인하세요</li>
             <li>근저당, 가압류 등이 설정되어 있는지 확인하세요(선순위 권리관계 확인)</li>
           </ul>
@@ -72,7 +70,7 @@ function BeforFormDetail1() {
         </h3>
         {isOpen5 && (
           <ul>
-            <li>홈택스 사이트, 위택스 사이트에 접속하여 임대인의 미납 세금 여부를 확인하셔야 해요.(계약 전에는 임대인의 동의가 필요하며 계약 후에는 임대인의 동의 필요 없이 열람이 가능해요.)</li>
+            <li><a href = "https://www.hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml">홈택스 사이트</a>, 위택스 사이트에 접속하여 임대인의 미납 세금 여부를 확인하셔야 해요.(계약 전에는 임대인의 동의가 필요하며 계약 후에는 임대인의 동의 필요 없이 열람이 가능해요.)</li>
             </ul>
         )}
       </div>

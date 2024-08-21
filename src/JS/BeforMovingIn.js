@@ -10,6 +10,8 @@ class BeforMovingIn extends Component {
   render() {
     return (
       <div>
+        <h1 className="highlight-title">계약과정</h1>
+        <p className = "sub">차근차근 확인하고 계약해요!</p>
         <div className="befor-moving-container"> {/* 클래스 추가 */}
           <BeforForm1 />
           <BeforForm2 />

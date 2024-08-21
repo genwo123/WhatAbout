@@ -41,7 +41,7 @@ function BeforFormDetail3() {
         <button className="return-button" onClick={() => navigate(-1)}>
           이전
         </button>
-        <button className="submit-button">
+        <button className="submit-button" onClick={() => navigate('/')}>
           확인
         </button>
       </div>

@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="home-container">
       <div className="main-content">
-        <h2>안전한 집을 위한 <br/>당신만의 안내원</h2>
+        <p>안전한 집을 위한 <br/>당신만의 안내원</p>
         <p className ="title">뭐 어때</p>
         <button className="cta-button" onClick={handleNavigate}>확인하기</button>
       </div>
