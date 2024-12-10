@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# 팅커벨 (TinkerBell) - 부동산 사기예방 도우미 서비스
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![프로젝트 타이틀](./image/여그워떠1.png)
 
-## Available Scripts
+## 📊 서비스 배경
 
-In the project directory, you can run:
+### 전세사기 현황
+- 2024년 기준 전세사기 피해자 약 2만명
+- 20~30대 청년층이 전체 피해자의 75% 차지
+  - 20대: 약 5천명 (25%)
+  - 30대: 약 1만명 (50%)
+- 임차권등기명령 신청 58% 증가
+  - 2023년 1-4월: 11,339건
+  - 2024년 1-4월: 17,917건
 
-### `npm start`
+![서비스 배경 통계](./image/여그워떠2.png)
+![서비스 배경 추가 데이터](./image/여그워떠3.png)
+![서비스 배경 상세](./image/여그워떠4.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 💡 서비스 소개
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 핵심 기능
+1. 계약 단계별 체크리스트 제공
+2. AI 기반 계약서 분석
+3. 사기 예방을 위한 증거자료 관리
 
-### `npm test`
+![서비스 메인 화면](./image/여그워떠7.png)
+![체크리스트 화면](./image/여그워떠8.png)
+![계약서 분석](./image/여그워떠9.png)
+![평가 결과](./image/여그워떠10.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 시장 비교 분석
 
-### `npm run build`
+| 기능 | 직방 | 다방 | 피터팬 | 팅커벨 |
+|------|------|------|--------|--------|
+| 부동산 중개 서비스 | O | O | O | X |
+| 청년 타겟팅 | O | O | O | O |
+| 임차인 가이드 제공 | X | △ | X | O |
+| 분쟁 예방 기능 | X | X | X | O |
+| 단계별 체크리스트 | X | X | X | O |
+| 범용성 | X | X | X | O |
+| 전체 과정 관리 | X | X | X | O |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![서비스 차별점](./image/여그워떠11.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💼 비즈니스 모델
+- B2G2C(Business-to-Government-to-Consumer) 모델
+- 정부 기관 및 대학교와 협력하여 청년 주거 안전 지원
+- 공공 서비스로서의 역할 강화
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![비즈니스 모델](./image/여그워떠12.png)
 
-### `npm run eject`
+## 🔧 기술 아키텍처
+AWS 클라우드 기반의 서버리스 아키텍처 구현
+- Frontend: React.js
+- Backend: AWS Lambda, API Gateway
+- Storage: Amazon S3
+- AI/ML: AWS Chatbot, OCR 서비스
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![기술 아키텍처](./image/여그워떠13.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 👥 팀 소개
+여그워떠(YeoGeuWater) 팀은 다양한 전문성을 가진 7명의 멤버로 구성되어 있습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. [PM] 안준식: 기획, PPT, 발표
+2. [프론트] 김건우: 프론트 구축 및 AWS 아키텍처 제작
+3. [백엔드] 김예원: API 개발 및 AI 프롬프팅
+4. [백엔드] 김진욱: Lambda 활용 이미지 처리
+5. [프론트] 류나연: 디자인 및 프론트엔드 구축
+6. [자료조사] 박시우: 자료 조사 및 계약서 평가기준 구체화
+7. [자료조사] 신서연: 체크리스트 내용 구체화, 자료조사
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![팀 소개](./image/여그워떠14.png)
 
-## Learn More
+## 📄 License
+This project is licensed under the MIT License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+© 2024 Team YeoGeuWater. All Rights Reserved.
