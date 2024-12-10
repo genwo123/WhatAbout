@@ -1,125 +1,95 @@
-# 팅커벨 (TinkerBell)
-> 부동산 계약 안전 도우미 서비스
+# 팅커벨 (TinkerBell) - 안전한 부동산 계약 도우미
 
-### Key Features Implementation
+![메인 타이틀](./image/여그워떠1.png)
 
-#### 1. 체크리스트 시스템
-- 단계별 맞춤 체크리스트 제공
-  - 계약 전: 중개사 확인, 매물 확인, 임대인 확인
-  - 계약 중: 계약서 검토, 특약 확인, 요금 확인
-  - 계약 후: 신청사항, 보관사항 확인
-  - 입주 전/중/후: 각종 확인사항 및 증거자료 관리
+## 💡 프로젝트 개요
 
-#### 2. AI 계약서 분석 시스템
-- OCR 처리 워크플로우:
-  ```
-  1. 사전 체크리스트 작성
-  2. 계약서 본문 업로드
-  3. API 엔드포인트 호출
-  4. Spring에서 데이터 파싱
-  5. AI 분석 실행 및 결과 반환
-  ```
+부동산 계약 과정에서 발생할 수 있는 사기를 예방하고, 안전한 거래를 지원하는 AI 기반 서비스입니다. 전세사기 피해가 증가하는 현 상황에서, 계약 전/중/후의 전 과정을 체계적으로 관리할 수 있는 솔루션을 제공합니다.
 
-- 평가 기준 (90점 만점):
-  - 기본 정보 정확성: 20점
-  - 법적 효력: 18점
-  - 특약 사항 완성도: 15점
-  - 항목 권리 적법성: 14점
-  - 기타 중요 조항: 13점
+![서비스 배경](./image/여그워떠2.png)
+![문제 현황](./image/여그워떠3.png)
+![피해 통계](./image/여그워떠4.png)
 
-#### 3. 증거자료 관리 시스템
-- UUID 기반 사진 관리
-- 단계별 사진 저장 및 조회 기능
-- 계약 전/중/후 상태 기록
+## 🔍 주요 기능 상세
 
-### Technical Stack
+### 1. 체크리스트 시스템
+계약 과정별 필수 확인사항을 제공합니다:
 
-#### Frontend
-```javascript
-// React 컴포넌트 예시
-const ChecklistComponent = () => {
-  const [checkItems, setCheckItems] = useState([]);
-  const [images, setImages] = useState([]);
-  
-  // 체크리스트 상태 관리
-  // 이미지 업로드 처리
-  // API 호출 로직
-};
-```
+#### 계약 전 체크리스트
+- 공인중개사 자격 검증 (국가공간정보포털 연동)
+- 현장 점검 항목 (수압, 수질, 하자 여부)
+- 등기부등본 확인 사항
 
-#### Backend
-- AWS Lambda Functions
-- Spring Boot AI Starter 활용
-- 데이터 저장 및 분석 파이프라인
+#### 계약 중 체크리스트
+- 근저당권 설정 확인
+- 특약사항 필수 포함 항목
+- 월세/관리비 세부 내역 확인
 
-```java
-// Spring Boot AI 구현 예시
-@Service
-public class ContractAnalysisService {
-    private final AI ai;
-    
-    public AnalysisResult analyzeContract(String content) {
-        // AI 분석 로직
-    }
-}
-```
+#### 계약 후 체크리스트
+- 확정일자 및 전입신고 가이드
+- 공과금 관리 방법
+- 입주 전/후 상태 체크
 
-### Development Guidelines
+![서비스 화면](./image/여그워떠7.png)
+![체크리스트 예시](./image/여그워떠8.png)
 
-#### 1. API 구현 원칙
-- 로그인 기능 제외 (보안 이슈 방지)
-- 일관된 AI 분석 결과 보장
-- RESTful API 설계
+### 2. AI 기반 계약서 분석
+전문 변호사와 부동산 전문가의 자문을 바탕으로 개발된 AI 분석 시스템입니다:
 
-#### 2. 데이터 처리 원칙
-- UUID 기반 자료 관리
-- 단계별 데이터 정규화
-- 이미지 최적화 처리
+- OCR 기술을 활용한 계약서 텍스트 추출
+- 특약조항의 법적 유효성 검증
+- 임차인 권리보호 조항 분석
 
-#### 3. UI/UX 가이드라인
-- 단계별 직관적 인터페이스
-- 사용자 친화적 에러 처리
-- 반응형 디자인 적용
+![계약서 분석](./image/여그워떠9.png)
+![분석 결과](./image/여그워떠10.png)
 
-## 🚀 Quick Start
+## 🌟 서비스 차별점
 
-1. 저장소 클론
-```bash
-git clone https://github.com/YourUsername/WhatAbout.git
-```
+기존 부동산 서비스와의 차별점을 구체적으로 분석했습니다:
 
-2. 종속성 설치
-```bash
-npm install
-```
+![서비스 비교](./image/여그워떠11.png)
 
-3. 개발 서버 실행
-```bash
-npm start
-```
+### 핵심 차별화 요소
+- 임차인 관점의 종합 솔루션
+- AI 기반 계약서 위험도 평가
+- 단계별 증거자료 관리 시스템
+- 공공데이터 연계 검증
 
-## 📝 Development Notes
+## 📱 비즈니스 모델
 
-### 주의사항
-- AI 분석 결과의 일관성 유지
-- 데이터 정규화 준수
-- 사용자 데이터 보안 관리
+![비즈니스 구조](./image/여그워떠12.png)
 
-### 향후 개선사항
-- AI 모델 정확도 향상
-- 사용자 피드백 시스템 구현
-- 실시간 알림 기능 추가
+### 수익 구조
+- 공공기관 협력 모델
+- 대학교 학생 지원 시스템 연계
+- 임대차 분쟁 예방 서비스
 
-## 🤝 Contributing
+## 🔧 기술 스택
 
-1. Fork the Project
-2. Create your Feature Branch
-3. Commit your Changes
-4. Push to the Branch
-5. Open a Pull Request
+![기술 아키텍처](./image/여그워떠13.png)
 
-## 📄 License
-This project is licensed under the MIT License
+### 상세 기술 스택
+- Frontend: React.js, TailwindCSS
+- Backend: AWS Lambda, Spring Boot
+- AI/ML: AWS Comprehend, Amazon Textract
+- Storage: Amazon S3, DynamoDB
+- API: Amazon API Gateway
+
+## 👥 팀 구성
+
+![팀 소개](./image/여그워떠14.png)
+
+각 팀원의 세부 담당 업무:
+- 안준식 [PM]: 서비스 기획/총괄
+- 김건우 [FE]: AWS 아키텍처 설계
+- 김예원 [BE]: API/AI 시스템 개발
+- 김진욱 [BE]: 이미지 처리/서버리스 구현
+- 류나연 [FE]: UI/UX 디자인
+- 박시우 [Research]: 평가기준 수립
+- 신서연 [Research]: 체크리스트 설계
+
+## 📝 라이센스
+MIT License
 
 ---
 © 2024 Team YeoGeuWater. All Rights Reserved.
